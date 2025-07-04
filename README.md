@@ -1,15 +1,15 @@
 # 🎓 Student Management System
 
-A simple Java-based Student Management System that demonstrates basic **CRUD operations** using **Hibernate Core**. This project is designed to help beginners practice Hibernate concepts, such as session management, annotations or XML configuration, and database interaction with **MySQL** or **PostgreSQL**.
+A simple Java-based Student Management System demonstrating basic **CRUD operations** using **Hibernate Core** with **Annotations**. This version uses only two classes — `Student` and `Main` — to keep the structure simple and beginner-friendly. It uses **PostgreSQL** for database interaction.
 
 ---
 
 ## 🧠 Concepts Covered
 
 - CRUD (Create, Read, Update, Delete) operations
-- Hibernate ORM (Object Relational Mapping)
-- Hibernate Annotations / XML Configuration
-- MySQL or PostgreSQL as backend database
+- Hibernate ORM with Annotations
+- PostgreSQL database connectivity
+- Basic session and transaction handling
 
 ---
 
@@ -31,10 +31,10 @@ Each student record includes:
 
 ## 🔧 Skills Practiced
 
-- Hibernate configuration using XML or annotations
-- Session and SessionFactory management
-- Entity mapping with annotations
-- Transaction handling with `Transaction` API
+- Hibernate configuration using `hibernate.cfg.xml`
+- Hibernate session management
+- Basic entity mapping with annotations
+- Transaction handling
 
 ---
 
@@ -42,9 +42,8 @@ Each student record includes:
 
 - Java 8+
 - Hibernate 5+
-- MySQL / PostgreSQL
+- PostgreSQL
 - JDBC Driver
-- (Optional) Maven for dependency management
 - IDE: IntelliJ IDEA / Eclipse
 
 ---
@@ -57,12 +56,10 @@ StudentManagementSystem/
 ├── src/
 │   └── com/yourpackage/
 │       ├── Student.java          # Entity class
-│       ├── StudentDAO.java       # Data Access Object
 │       └── Main.java             # Main application
 │
-├── hibernate.cfg.xml            # Hibernate configuration (if using XML)
-├── pom.xml                      # Maven file (if using Maven)
-└── README.md                    # Project documentation
+├── hibernate.cfg.xml            # Hibernate configuration
+├── README.md                    # Project documentation
 ```
 
 ---
@@ -72,36 +69,33 @@ StudentManagementSystem/
 ### Prerequisites
 
 - Java installed
-- MySQL or PostgreSQL running
-- Hibernate libraries in classpath (or use Maven)
-- JDBC driver (MySQL or PostgreSQL)
+- PostgreSQL running
+- Hibernate libraries in classpath
+- PostgreSQL JDBC driver
 
 ### Setup Steps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/StudentManagementSystem.git
+   git clone https://github.com/mhnuk2007/StudentManagementSystem.git
    cd StudentManagementSystem
    ```
 
-2. Create a database:
+2. Create the PostgreSQL database:
    ```sql
    CREATE DATABASE studentdb;
    ```
 
-3. Configure your database connection in `hibernate.cfg.xml`:
+3. Configure your `hibernate.cfg.xml` file:
    ```xml
-   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/studentdb</property>
-   <property name="hibernate.connection.username">root</property>
-   <property name="hibernate.connection.password">yourpassword</property>
+   <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+   <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/studentdb</property>
+   <property name="hibernate.connection.username">postgres</property>
+   <property name="hibernate.connection.password">0000</property>
    ```
 
 4. Compile and run:
-    - If using an IDE, run `Main.java`.
-    - If using Maven:
-      ```bash
-      mvn clean compile exec:java -Dexec.mainClass="com.yourpackage.Main"
-      ```
+   - If using an IDE, run `Main.java`.
 
 ---
 
@@ -119,12 +113,6 @@ Enter your choice:
 
 ---
 
-## 🤝 Contributing
-
-Feel free to fork this repo and submit pull requests. Suggestions and improvements are welcome!
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License.
@@ -133,8 +121,6 @@ This project is licensed under the MIT License.
 
 ## 📫 Contact
 
-Developed by **[Your Name]**
+Developed by **Mohan Lal**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/yourprofile)
+- GitHub: [mhnuk2007](https://github.com/mhnuk2007/StudentManagementSystem)
