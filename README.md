@@ -53,13 +53,16 @@ Each student record includes:
 ```
 StudentManagementSystem/
 │
-├── src/
-│   └── com/learning/
-│       ├── Student.java          # Entity class
-│       └── Main.java             # Main application
-│
-├── hibernate.cfg.xml            # Hibernate configuration
-├── README.md                    # Project documentation
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───learning
+|   │   │           ├── Student.java          # Entity class
+│   |   │           └── Main.java             # Main application
+│   │   └───resources                         # Hibernate configuration
+|   |               └─── hibernate.cfg.xml    # Hibernate configuration
+├── README.md                                 # Project documentation
 ```
 
 ---
