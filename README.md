@@ -54,7 +54,7 @@ Each student record includes:
 StudentManagementSystem/
 │
 ├── src/
-│   └── com/yourpackage/
+│   └── com/learning/
 │       ├── Student.java          # Entity class
 │       └── Main.java             # Main application
 │
